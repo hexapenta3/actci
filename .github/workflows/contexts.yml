@@ -1,0 +1,8 @@
+name: Contexts
+on: push
+jobs:
+  print:
+    runs-on: windows-latest  
+    steps:
+      - run: echo "${{ github.actor }}"
+
