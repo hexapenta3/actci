@@ -3,7 +3,7 @@ on: push
 jobs:
   hello:
     runs-on: windows-latest
-      steps:
+    steps:
       - run: echo "Hello, world"
       - uses: actions/checkout@v4
 
