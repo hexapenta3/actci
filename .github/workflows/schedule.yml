@@ -2,6 +2,8 @@ name: Schedule
 on:
   schedule:
     - cron: '*/15 * * * *'
+  workflow_dispatch:
+    
 jobs:
   run:
     runs-on: windows-latest
