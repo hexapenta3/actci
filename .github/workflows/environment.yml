@@ -1,16 +1,14 @@
-name: Environment variables
+name: Override environment variables
 on: push
+env: 
+  EXAMPLE: Defined by workflow level
 jobs:
-  run:
+  print:
     runs-on: windows-latest  
-    env:
-      BRANCH: main
-      BRANCH_REPS: ${{ vars.BRANCH_REPO}}
     steps:
-      - run: echo $env:BRANCH
-      - run: echo $env:BRANCH_REPS 
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ env.BRANCH }}
+      - run: echo $env:EXAMPLE
+      - env:
+          EXAMPLE: Defined by step level
+        run: echo $env:EXAMPLE
       
 
