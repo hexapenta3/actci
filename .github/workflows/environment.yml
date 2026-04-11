@@ -5,8 +5,10 @@ jobs:
     runs-on: windows-latest  
     env:
       BRANCH: main
+      BRANCH_REPS: ${{ vars.BRANCH_REPO}}
     steps:
-      - run: echo "${ BRANCH }"
+      - run: echo $env:BRANCH
+      - run: echo $env:BRANCH_REPS 
       - uses: actions/checkout@v4
         with:
           ref: ${{ env.BRANCH }}
