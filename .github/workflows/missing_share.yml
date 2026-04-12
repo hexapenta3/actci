@@ -10,6 +10,7 @@ jobs:
       - env:
           RESULT: ${{ steps.source.outputs.result }}
         run: echo "${RESULT}"
+      - run: echo "${{ toJSON(steps.source.outputs) }}"
 
 
 
