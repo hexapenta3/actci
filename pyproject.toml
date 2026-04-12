@@ -19,3 +19,9 @@ dependencies = [
 where = ["."]
 include = ["actci*"]
 exclude = ["tests", "tests.*"]
+
+
+[dependency-groups]
+dev = ["pytest"]
+
+

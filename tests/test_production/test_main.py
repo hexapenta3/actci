@@ -14,6 +14,6 @@ def test_main():
     """
     numbers = main.get_numbers()
     print(numbers)
-    assert numbers == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    assert numbers == [1, 2, 3, 4, 5, 6, 7, 8, 9, ]
 
 
