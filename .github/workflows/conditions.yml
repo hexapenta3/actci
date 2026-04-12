@@ -4,7 +4,7 @@ jobs:
    conditions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${FORMAT_RUNID}
+      - run: echo "${FORMAT_RUNID}"
         env: 
           FORMAT_RUNID: ${{ format('run_id:{0}', github.run_id) }}
       - run: echo "Hello"
