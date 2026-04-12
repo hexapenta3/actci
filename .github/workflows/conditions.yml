@@ -1,7 +1,7 @@
 name: Conditions
 on: push
 jobs:
-   skip-or-run:
+   conditions:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${FORMAT_RUNID}
