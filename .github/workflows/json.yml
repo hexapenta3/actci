@@ -1,0 +1,10 @@
+name: Generate json
+on: push
+jobs:
+   json:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${CONTEXT}"
+        env:
+          CONTEXT: ${{ toJSON(github) }}
+
