@@ -6,6 +6,7 @@ def get_numbers():
     """
         1から10までの数字をlistで返す関数
     """
+    print('func: get_numbers')
     return list(range(1, 11))
 
 

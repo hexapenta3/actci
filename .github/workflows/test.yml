@@ -1,13 +1,21 @@
 name: Test
-on: 
-  pull_request:
+on: pull_request
 jobs:
-  conditions:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${FORMAT_RUNID}
-        env: 
-          FORMAT_RUNID: ${{ format('run_id:{0}', github.run_id) }}
-      - run: echo "Hello"
-        if: ${{ contains(github.run_id, '2') }}
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Sync dependencies
+        run: uv sync
+
+      - name: Run tests
+        run: uv run pytest -q
+
 
