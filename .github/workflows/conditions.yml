@@ -8,5 +8,5 @@ jobs:
         env: 
           FORMAT_RUNID: ${{ format('run_id:{0}', github.run_id) }}
       - run: echo "Hello"
-        if: ${{ contains(github.run_id, '1') }}
+        if: ${{ contains(github.run_id, '2') }}
 
