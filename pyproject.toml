@@ -21,7 +21,7 @@ include = ["actci*"]
 exclude = ["tests", "tests.*"]
 
 
-[tool.uv]
-dev-dependencies = ["pytest"]
+[dependency-groups]
+dev = ["pytest"]
 
 
