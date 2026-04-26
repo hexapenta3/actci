@@ -9,7 +9,7 @@ on:
         default: A cheerflu word
 jobs:
   run:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "${{ inputs.greeting }}"
 

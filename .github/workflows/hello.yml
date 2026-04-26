@@ -1,8 +1,8 @@
-name: Workflow error
+name: Hello
 on: push
 jobs:
   Hello:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, World"
       - uses: actions/checkout@v4
