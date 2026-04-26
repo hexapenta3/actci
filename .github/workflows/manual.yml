@@ -6,7 +6,7 @@ on:
         type: string
         default: Hello
         required: true
-        default: A cheerflu word
+        description: A cheerflu word
 jobs:
   run:
     runs-on: ubuntu-latest
