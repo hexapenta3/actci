@@ -5,7 +5,7 @@ jobs:
   get_env_variables:
     runs-on: ubuntu-latest
     env:
-      USERNAME: ${{ variables.USERNAME }}
+      USERNAME: ${{ vars.USERNAME }}
       PASSWORD: ${{ secrets.PASSWORD }}
     steps:
       - run: echo "username = ${USERNAME}"
