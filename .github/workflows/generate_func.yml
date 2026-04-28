@@ -13,7 +13,7 @@ jobs:
           HASH: ${{ hashFiles('.github/workflows/*.yml') }}
           RUNID: ${{ github.run_id }}
       - run: echo "Hello"
-        if: ${{ contains(${RUNID}, '1') }}
+        if: ${{ contains("${RUNID}", '1') }}
       - run: echo "${RUNID}"
 
 
