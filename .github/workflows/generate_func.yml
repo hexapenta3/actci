@@ -9,6 +9,6 @@ jobs:
         env:
           FORMAT_FUNC: ${{ format('{0}, {1}', 'Hi', 'world') }}
           JOIN_FUNC: ${{ join(github.event.*.html_url, ', ') }}
-      - run: echo "${{ github/workflows/*.yml}}"
+      - run: echo "${{ .github/workflows/*.yml }}"
 
 
