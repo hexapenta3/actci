@@ -1,14 +1,13 @@
-name: Generate functions
+name: Hash functions
 on: 
   push:
 jobs:
-  generate_func_job:
+  hash_job:
     runs-on: ubuntu-latest
     steps:
-      - run: printenv | grep '_FUNC'
+      - users: actions/checkout@v4
+      - run: echo "${hash}"
         env:
-          FORMAT_FUNC: ${{ format('{0}, {1}', 'Hi', 'world') }}
-          JOIN_FUNC: ${{ join(github.event.*.html_url, ', ') }}
-      - run: echo "${{ .github/workflows/*.yml }}"
+          HASH: ${{ hashFiles('.github/workflows/*.yml') }}
 
 
