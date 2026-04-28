@@ -12,7 +12,8 @@ jobs:
         with:
           python-version: 3.12
 
-      - run: pytest tests/test_main.py
+      - name: Run tests
+        run: pytest tests/test_main.py
 
-      
+
 
