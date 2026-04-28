@@ -9,5 +9,6 @@ jobs:
       - run: echo "${HASH}"
         env:
           HASH: ${{ hashFiles('.github/workflows/*.yml') }}
+      - run: echo ${{ github.run_id }}
 
 
