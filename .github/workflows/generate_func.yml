@@ -12,6 +12,6 @@ jobs:
           RUNID: ${{ github.run_id }}
       # - run: echo "Hello"
       #   if: ${{ contains(${RUNID}, '1') }}
-      - run: echo ${RUNID}
+      - run: echo "${RUNID}"
 
 
