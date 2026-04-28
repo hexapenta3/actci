@@ -4,14 +4,16 @@ on:
 jobs:
   hash_job:
     runs-on: ubuntu-latest
+    env:
+      RUNID: ${{ github.run_id }}
     steps:
       - uses: actions/checkout@v4
       - run: echo "${HASH}"
         env:
           HASH: ${{ hashFiles('.github/workflows/*.yml') }}
           RUNID: ${{ github.run_id }}
-      # - run: echo "Hello"
-      #   if: ${{ contains(${RUNID}, '1') }}
+      - run: echo "Hello"
+        if: ${{ contains(${RUNID}, '1') }}
       - run: echo "${RUNID}"
 
 
