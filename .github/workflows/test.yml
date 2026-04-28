@@ -12,7 +12,11 @@ jobs:
         with:
           python-version: 3.12
 
-      - run: pytest tests/test_main.py
+      - run: python -m pip install --upgrade pip
+      - run: pip install pytest
 
-      
+      - name: Run tests
+        run: pytest tests
+
+
 
