@@ -9,6 +9,8 @@ jobs:
       - run: echo "${HASH}"
         env:
           HASH: ${{ hashFiles('.github/workflows/*.yml') }}
-      - run: echo ${{ contains(github.run_id, '1') }}
+      - run: echo "Hello"
+        if: ${{ contains(github.run_id, '1') }}
 
+        
 
