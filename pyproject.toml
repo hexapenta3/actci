@@ -22,7 +22,7 @@ exclude = ["tests", "tests.*"]
 
 
 
-[dependency-groups]
+[project.optional-dependencies]
 dev = ["pytest"]
 
 
