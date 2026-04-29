@@ -6,7 +6,7 @@ def get_numbers():
     """
         1から10までの数字をlistで返す関数
     """
-    print('Add test comments 5.')
+    print('Add test comments 6.')
     print('func: get_numbers edit.')
     return list(range(1, 11))
 
