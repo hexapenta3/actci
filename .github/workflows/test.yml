@@ -3,8 +3,8 @@ on:
   pull_request:
     paths:
       - '**/*.py'
-      - '**/'.yml'
-      - '**/'.yaml'
+      - '**/*.yml'
+      - '**/*.yaml'
 
 jobs:
   test_prod:
